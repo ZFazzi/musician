@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+body{
+    background-color: black;
+    max-width: 1200px;
+    max-height: 1900px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+    font-size: 24px;
+    font-family: "Actor", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding:  2%;
+}
+
+.logo {
+    margin-left: 100px;
+}
+
+.navbar {
+    flex-grow: 0.9;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    float: left;
+    padding: 22px;
+}
+
+li a {   
+    text-decoration: none;
+    display: block;
+    color: #ffffff;
+    line-height: 22px;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+li a:hover {
+    font-size: 24px;
+}
+
+/*Main*/
+main{
+    padding:  7%;
+}
+h1{
+    color: #ffffff;
+    line-height: 102px;
+    letter-spacing: -2px;
+    font-size: 84px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+.main-text{
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 34px;
+    letter-spacing: 0px;
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 40px;
+}
+section{
+    display: inline-block;
+  }
