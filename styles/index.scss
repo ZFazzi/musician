@@ -1,16 +1,21 @@
+ 
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/*header*/
+/*Body*/
 body{
     background-color: black;
-    max-width: 1200px;
-    max-height: 1900px;
+    font-family: "Source Sans 3", sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
-
+/*Header*/
 .header {
     display: flex;
     justify-content: space-between;
@@ -23,30 +28,34 @@ body{
     font-weight: 400;
     font-style: normal;
     padding:  2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
 }
 
 .logo {
-    margin-left: 100px;
+    margin-left: 8%;
 }
 
 .navbar {
+    align-items: flex-start;
     flex-grow: 0.9;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
 }
 
 ul li {
-    float: left;
-    padding: 22px;
+    padding: 28px;
 }
 
 li a {   
     text-decoration: none;
-    display: block;
     color: #ffffff;
     line-height: 22px;
     letter-spacing: 0px;
@@ -58,13 +67,20 @@ li a {
 }
 
 li a:hover {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 /*Main*/
-main{
-    padding:  7%;
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10%;
+    height: 100vh;
+    position: relative;
 }
+
+/*Text Section*/
 h1{
     color: #ffffff;
     line-height: 102px;
@@ -73,7 +89,10 @@ h1{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
 
+.textarea{
+    flex: 1;
 }
 
 .main-text{
@@ -87,6 +106,59 @@ h1{
     font-style: normal;
     margin-top: 40px;
 }
-section{
-    display: inline-block;
-  }
+/*Image Section*/
+.image{
+    flex: 1;
+    text-align: right;
+}
+
+.image img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100vh;
+}
+
+/*Responsiveness*/
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .header{
+        padding: 20px;
+    }
+    nav ul{
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+    }
+    ul li{
+        padding: 10px;
+        float: none;
+    }
+    h1{
+        font-size: 48px;
+        line-height: 58px;
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
+    .main-text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .image-section{
+        margin-top: 20px;
+    }
+    .image-section img{
+        width: 100%;
+        height: auto;
+        max-height: 50vh; 
+    }
+}
+
