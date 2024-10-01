@@ -1,9 +1,8 @@
- 
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    $main-txt-color: #ffffff;
 }
 
 /*Body*/
@@ -16,47 +15,46 @@ body{
     overflow-x: hidden;
 }
 /*Header*/
-.header {
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #ffffff;
+    color: $main-txt-color;
     line-height: 36px;
     letter-spacing: -0.25px;
     font-size: 24px;
     font-family: "Actor", sans-serif;
     font-weight: 400;
     font-style: normal;
-    padding:  2%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-
+    padding: 10px;
 }
 
-.logo {
+.logo{
     margin-left: 8%;
 }
 
-.navbar {
+.navbar{
     align-items: flex-start;
     flex-grow: 0.9;
 }
 
-nav ul {
+nav ul{
     list-style-type: none;
     display: flex;
 }
 
-ul li {
+ul li{
     padding: 28px;
 }
 
-li a {   
+li a{   
     text-decoration: none;
-    color: #ffffff;
+    color: $main-txt-color;
     line-height: 22px;
     letter-spacing: 0px;
     font-size: 16px;
@@ -66,7 +64,7 @@ li a {
     font-style: normal;
 }
 
-li a:hover {
+li a:hover{
     font-size: 18px;
 }
 
@@ -82,7 +80,7 @@ li a:hover {
 
 /*Text Section*/
 h1{
-    color: #ffffff;
+    color: $main-txt-color;
     line-height: 102px;
     letter-spacing: -2px;
     font-size: 84px;
@@ -97,7 +95,7 @@ h1{
 
 .main-text{
     font-size: 22px;
-    color: #ffffff;
+    color: $main-txt-color;
     line-height: 34px;
     letter-spacing: 0px;
     font-family: "Source Sans 3", sans-serif;
@@ -121,7 +119,7 @@ h1{
 
 /*Responsiveness*/
 
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .container{
         flex-direction: column;
         justify-content: center;
@@ -142,8 +140,9 @@ h1{
         float: none;
     }
     h1{
-        font-size: 48px;
-        line-height: 58px;
+        font-size: 72px;
+        line-height: 82px;
+        letter-spacing: -1.6px;
         display: flex;
         justify-content: center;
         margin-top: 80px;
@@ -152,13 +151,13 @@ h1{
         font-size: 16px;
         line-height: 24px;
     }
-    .image-section{
+    .image{
         margin-top: 20px;
     }
-    .image-section img{
-        width: 100%;
-        height: auto;
-        max-height: 50vh; 
+    .image img{
+        width: 50%;
+        height: 50%;
+        max-height: 30vh; 
     }
 }
 
