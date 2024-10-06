@@ -1,8 +1,9 @@
+
+$main-txt-color: #ffffff;
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    $main-txt-color: #ffffff;
 }
 
 /*Body*/
@@ -26,12 +27,12 @@ body{
     font-family: "Actor", sans-serif;
     font-weight: 400;
     font-style: normal;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
     padding: 10px;
+    max-width: 80%;
 }
 
 .logo{
@@ -73,9 +74,10 @@ li a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10%;
-    height: 100vh;
-    position: relative;
+    padding-left: 7%;
+    padding-right: 10%;
+    padding-top: 2%;
+   
 }
 
 /*Text Section*/
@@ -91,6 +93,7 @@ h1{
 
 .textarea{
     flex: 1;
+    max-width: 21%;
 }
 
 .main-text{
@@ -111,13 +114,59 @@ h1{
 }
 
 .image img{
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     object-fit: cover;
-    max-height: 100vh;
 }
 
 /*Responsiveness*/
+
+@media screen and (max-width: 1200px){
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .header{
+        padding: 20px;
+    }
+    .navbar{
+        flex-grow: 0.1;
+        align-items: flex-end;
+    }
+    nav ul{
+        display: inline-block;
+        text-align: center;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+    }
+    ul li{
+        padding: 10px;
+        float: none;
+    }
+    h1{
+        font-size: 72px;
+        line-height: 82px;
+        letter-spacing: -1.6px;
+        display: flex;
+        justify-content: center;
+        margin-top: 80px;
+    }
+    .main-text{
+        font-size: 22px;
+        line-height: 33px;
+    }
+    .image{
+        margin-top: 20px;
+    }
+    .image img{
+        width: 70%;
+        height: 30%;
+        max-height: 30vh; 
+    }
+}
+
 
 @media screen and (max-width: 768px){
     .container{
@@ -140,16 +189,16 @@ h1{
         float: none;
     }
     h1{
-        font-size: 72px;
-        line-height: 82px;
-        letter-spacing: -1.6px;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: -0.8px;
         display: flex;
         justify-content: center;
         margin-top: 80px;
     }
     .main-text{
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 12px;
+        line-height: 18px;
     }
     .image{
         margin-top: 20px;
@@ -160,4 +209,5 @@ h1{
         max-height: 30vh; 
     }
 }
+
 
